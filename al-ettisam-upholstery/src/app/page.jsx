@@ -168,7 +168,7 @@ const HomePage = () => {
         {/* Google Reviews Section */}
         <section className="py-10 sm:py-14 md:py-20 bg-gray-100 animate-fade-in" id="reviews">
           <div className="container w-full max-w-none mx-auto px-2 sm:px-4 md:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 flex items-center justify-center gap-2">
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 flex items-center justify-center gap-2 text-gray-900">
               <span>Google Reviews</span>
               <Image src="/google-logo.png" alt="Google logo" width={32} height={32} className="inline-block align-middle" />
             </h2>
@@ -203,7 +203,7 @@ const HomePage = () => {
         {/* Contact Section - SEO Optimized */}
         <section className="py-10 sm:py-14 md:py-20 bg-gray-100 animate-fade-in" id="contact">
           <div className="container w-full max-w-none mx-auto px-2 sm:px-4 md:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Contact Al Ettisam – Car Seat Upholstery & Repair Dubai</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Contact Al Ettisam – Car Seat Upholstery & Repair Dubai</h2>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Looking for car seat upholstery, car seat repair, or custom leather interiors in Dubai? Fill out the form below to get a free quote or expert advice from Al Ettisam’s professional team. We specialize in car seat restoration, seat covers, leather interiors, and all types of car upholstery services in Dubai.
             </p>

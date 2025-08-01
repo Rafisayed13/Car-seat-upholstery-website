@@ -33,14 +33,24 @@ const Navbar = () => {
       {/* Mobile menu overlay */}
       {menuOpen && (
         <>
-          <div className="fixed inset-0 z-40 bg-black bg-opacity-60 md:hidden" onClick={() => setMenuOpen(false)}></div>
-          <div className="md:hidden fixed top-16 left-0 w-full bg-gray-950 rounded-b-lg shadow-lg z-50 animate-slide-down">
-            <div className="flex flex-col px-4 pb-4">
-              <a href="#services" className="block py-2 px-2 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors" onClick={() => setMenuOpen(false)}>Services</a>
-              <a href="#gallery" className="block py-2 px-2 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors" onClick={() => setMenuOpen(false)}>Gallery</a>
-              <a href="#reviews" className="block py-2 px-2 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors" onClick={() => setMenuOpen(false)}>Reviews</a>
-              <a href="#contact" className="block py-2 px-2 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors" onClick={() => setMenuOpen(false)}>Contact</a>
-            </div>
+          {/* Fullscreen overlay */}
+          <div className="fixed inset-0 z-40 bg-black bg-opacity-80 md:hidden" onClick={() => setMenuOpen(false)}></div>
+          {/* Centered mobile menu with close button */}
+          <div className="md:hidden fixed inset-0 top-16 bg-gray-950 z-50 flex flex-col justify-center items-center animate-slide-down h-[calc(100vh-64px)]">
+            <button
+              aria-label="Close menu"
+              className="absolute top-4 right-4 text-white text-3xl focus:outline-none"
+              onClick={() => setMenuOpen(false)}
+              style={{zIndex: 60}}
+            >
+              &times;
+            </button>
+            <nav className="w-full flex flex-col items-center gap-6 mt-8">
+              <a href="#services" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Services</a>
+              <a href="#gallery" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Gallery</a>
+              <a href="#reviews" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Reviews</a>
+              <a href="#contact" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Contact</a>
+            </nav>
           </div>
         </>
       )}
