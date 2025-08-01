@@ -292,7 +292,7 @@ const HomePage = () => {
             </a>
           </div>
           <p className="text-lg font-bold">
-            Email: <a href="mailto:alettisamcarseatupholster@gmail.com" className="hover:text-yellow-500 transition-colors">alettisamcarseatupholstery@gmail.com</a>
+            Email: <a href="mailto:alettisamcarseatsupholstery@gmail.com" className="hover:text-yellow-500 transition-colors">alettisamcarseatupholstery@gmail.com</a>
           </p>
           <p className="mt-4 text-sm text-gray-500">&copy; {new Date().getFullYear()} Al Ettisam Car Seat Upholstery Dubai. All rights reserved.</p>
         </div>
