@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://al-ettisamcarseats.vercel.app
+
+# Sitemaps
+Sitemap: https://al-ettisamcarseats.vercel.app/sitemap.xml
