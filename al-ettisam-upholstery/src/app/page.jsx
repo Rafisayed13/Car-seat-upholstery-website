@@ -1,7 +1,10 @@
 
 
+
 import React from 'react';
 import Image from 'next/image';
+import Head from 'next/head';
+import fs from 'fs';
 
 export const metadata = {
   title: 'Car Seat Upholstery Dubai | Car Seats, Seat Repair & Custom Interiors | Al Ettisam',
@@ -23,8 +26,28 @@ export const metadata = {
 };
 
 const HomePage = () => {
+  // Read LocalBusiness schema from public folder
+  let localBusinessSchema = '';
+  try {
+    localBusinessSchema = fs.readFileSync(
+      process.cwd() + '/public/localbusiness-schema.json',
+      'utf8'
+    );
+  } catch (e) {
+    localBusinessSchema = '';
+  }
   return (
     <>
+      <Head>
+        <title>Car Seat Upholstery Dubai | Car Seats, Seat Repair & Custom Interiors | Al Ettisam</title>
+        <meta name="description" content="Looking for car seats, car seat upholstery, seat repair, or custom leather interiors in Dubai? Al Ettisam provides expert car seat repair, upholstery, restoration, and custom interiors for all vehicles. Transform your car’s interior with our quality craftsmanship and professional service." />
+        <meta name="keywords" content="car seats, car seat upholstery, seat repair, car seat repair Dubai, car upholstery Dubai, leather car seats, custom car interiors, car seat restoration, car seat replacement, car seat covers, Al Ettisam" />
+        <meta property="og:title" content="Car Seat Upholstery Dubai | Car Seats, Seat Repair & Custom Interiors | Al Ettisam" />
+        <meta property="og:description" content="Find car seats, car seat upholstery, seat repair, and custom interiors in Dubai. Al Ettisam offers expert car seat repair, restoration, and luxury leather interiors." />
+        <meta property="og:url" content="https://al-ettisam-upholstery.com" />
+        <meta property="og:image" content="/hero-car.jpg" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: localBusinessSchema }} />
+      </Head>
       {/* Navbar is now included globally in layout.jsx */}
       <main className="pt-0 md:pt-0">
         {/* Hero Section */}
@@ -36,6 +59,7 @@ const HomePage = () => {
             style={{ objectFit: 'cover' }}
             priority
             className="absolute inset-0 z-0"
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           <div className="relative z-20 text-center px-2 sm:px-4 animate-slide-up mt-8 sm:mt-12">

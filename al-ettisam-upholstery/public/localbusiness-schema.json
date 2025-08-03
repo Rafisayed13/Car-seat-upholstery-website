@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Al Ettisam Car Seat Upholstery Dubai",
+  "image": "https://al-ettisam-upholstery.com/hero-car.jpg",
+  "@id": "https://al-ettisam-upholstery.com",
+  "url": "https://al-ettisam-upholstery.com",
+  "telephone": "+971554969599",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Dubai 1 Street 23/1, Umm Ramool",
+    "addressLocality": "Dubai",
+    "addressCountry": "AE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 25.2285,
+    "longitude": 55.3662
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:00",
+    "closes": "20:00"
+  }],
+  "sameAs": [
+    "https://www.facebook.com/alettisamcarseatupholstery/",
+    "https://www.instagram.com/alettisamcarseatupholstery/"
+  ]
+}

@@ -1,4 +1,21 @@
+
 @import "tailwindcss";
+
+/* Ensure font-display: swap for all web fonts */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Geist'), url('/fonts/Geist.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Geist Mono'), url('/fonts/GeistMono.woff2') format('woff2');
+  font-display: swap;
+}
 
 :root {
   --background: #ffffff;
