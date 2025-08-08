@@ -36,6 +36,7 @@ const Header = () => {
               <a href="#services" className="text-white hover:text-yellow-300 transition-colors duration-200">Services</a>
               <a href="#gallery" className="text-white hover:text-yellow-300 transition-colors duration-200">Gallery</a>
               <a href="#contact" className="text-white hover:text-yellow-300 transition-colors duration-200">Contact</a>
+              <a href="/blog" className="text-white hover:text-yellow-300 transition-colors duration-200">Blog</a>
             </nav>
 
             {/* Mobile Menu Button (Hamburger) */}
@@ -69,6 +70,7 @@ const Header = () => {
           <a onClick={() => setIsMenuOpen(false)} href="#services" className="text-white hover:text-yellow-300 transition-colors duration-200">Services</a>
           <a onClick={() => setIsMenuOpen(false)} href="#gallery" className="text-white hover:text-yellow-300 transition-colors duration-200">Gallery</a>
           <a onClick={() => setIsMenuOpen(false)} href="#contact" className="text-white hover:text-yellow-300 transition-colors duration-200">Contact</a>
+          <a onClick={() => setIsMenuOpen(false)} href="/blog" className="text-white hover:text-yellow-300 transition-colors duration-200">Blog</a>
         </nav>
       </div>
     </header>

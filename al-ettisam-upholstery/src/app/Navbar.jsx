@@ -1,7 +1,9 @@
 "use client";
 
+
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 const Navbar = () => {
@@ -9,15 +11,16 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-950 text-white w-full shadow-lg fixed top-0 left-0 right-0 z-50" style={{height: '64px'}}>
       <div className="container mx-auto flex items-center justify-between px-2 sm:px-4 h-16">
-        <a href="#" className="flex items-center gap-2 text-2xl font-bold tracking-tight text-yellow-400">
+        <Link href="/" className="flex items-center gap-2 text-2xl font-bold tracking-tight text-yellow-400">
           <Image src="/logo.png" alt="Al Ettisam Logo" width={36} height={36} className="inline-block" />
           Al Ettisam
-        </a>
+        </Link>
         <div className="hidden md:flex space-x-6">
-          <a href="#services" className="hover:text-yellow-400 transition-colors">Services</a>
-          <a href="#gallery" className="hover:text-yellow-400 transition-colors">Gallery</a>
-          <a href="#reviews" className="hover:text-yellow-400 transition-colors">Reviews</a>
-          <a href="#contact" className="hover:text-yellow-400 transition-colors">Contact</a>
+          <Link href="/#services" className="hover:text-yellow-400 transition-colors">Services</Link>
+          <Link href="/#gallery" className="hover:text-yellow-400 transition-colors">Gallery</Link>
+          <Link href="/#reviews" className="hover:text-yellow-400 transition-colors">Reviews</Link>
+          <Link href="/#contact" className="hover:text-yellow-400 transition-colors">Contact</Link>
+          <Link href="/blog" className="hover:text-yellow-400 transition-colors">Blog</Link>
         </div>
         {/* Hamburger menu for mobile */}
         <div className="md:hidden flex items-center">
@@ -46,10 +49,11 @@ const Navbar = () => {
               &times;
             </button>
             <nav className="w-full flex flex-col items-center gap-6 mt-8">
-              <a href="#services" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Services</a>
-              <a href="#gallery" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Gallery</a>
-              <a href="#reviews" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Reviews</a>
-              <a href="#contact" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Contact</a>
+              <Link href="/#services" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Services</Link>
+              <Link href="/#gallery" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Gallery</Link>
+              <Link href="/#reviews" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Reviews</Link>
+              <Link href="/#contact" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Contact</Link>
+              <Link href="/blog" className="text-lg py-3 px-8 rounded hover:bg-yellow-500 hover:text-gray-900 transition-colors w-4/5 text-center" onClick={() => setMenuOpen(false)}>Blog</Link>
             </nav>
           </div>
         </>

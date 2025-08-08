@@ -3,8 +3,8 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Head from 'next/head';
-import fs from 'fs';
+
+
 
 export const metadata = {
   title: 'Car Seat Upholstery Dubai | Car Seats, Seat Repair & Custom Interiors | Al Ettisam',
@@ -26,28 +26,9 @@ export const metadata = {
 };
 
 const HomePage = () => {
-  // Read LocalBusiness schema from public folder
-  let localBusinessSchema = '';
-  try {
-    localBusinessSchema = fs.readFileSync(
-      process.cwd() + '/public/localbusiness-schema.json',
-      'utf8'
-    );
-  } catch (e) {
-    localBusinessSchema = '';
-  }
+  // LocalBusiness schema removed: fs cannot be used in client components.
   return (
     <>
-      <Head>
-        <title>Car Seat Upholstery Dubai | Car Seats, Seat Repair & Custom Interiors | Al Ettisam</title>
-        <meta name="description" content="Looking for car seats, car seat upholstery, seat repair, or custom leather interiors in Dubai? Al Ettisam provides expert car seat repair, upholstery, restoration, and custom interiors for all vehicles. Transform your car’s interior with our quality craftsmanship and professional service." />
-        <meta name="keywords" content="car seats, car seat upholstery, seat repair, car seat repair Dubai, car upholstery Dubai, leather car seats, custom car interiors, car seat restoration, car seat replacement, car seat covers, Al Ettisam" />
-        <meta property="og:title" content="Car Seat Upholstery Dubai | Car Seats, Seat Repair & Custom Interiors | Al Ettisam" />
-        <meta property="og:description" content="Find car seats, car seat upholstery, seat repair, and custom interiors in Dubai. Al Ettisam offers expert car seat repair, restoration, and luxury leather interiors." />
-        <meta property="og:url" content="https://al-ettisam-upholstery.com" />
-        <meta property="og:image" content="/hero-car.jpg" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: localBusinessSchema }} />
-      </Head>
       {/* Navbar is now included globally in layout.jsx */}
       <main className="pt-0 md:pt-0">
         {/* Hero Section */}
@@ -87,7 +68,7 @@ const HomePage = () => {
               {/* Service Card 1 */}
               <div className="relative h-96 rounded-lg overflow-hidden shadow-xl flex flex-col bg-black bg-opacity-70 transition-transform duration-500 hover:scale-105 animate-zoom-in mb-6">
                 <div className="w-full h-40 relative">
-                  <Image src="/service-1.jpg" alt="Customised Leather Seats" fill style={{ objectFit: 'cover' }} className="object-cover" />
+                  <Image src="/service-1.jpg" alt="Customised Leather Seats" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} className="object-cover" />
                 </div>
                 <div className="flex-1 flex flex-col justify-end p-6">
                   <h3 className="text-2xl font-bold mb-2">Customised Leather Seats</h3>
@@ -105,7 +86,7 @@ const HomePage = () => {
               {/* Service Card 2 */}
               <div className="relative h-96 rounded-lg overflow-hidden shadow-xl flex flex-col bg-black bg-opacity-70 transition-transform duration-500 hover:scale-105 animate-zoom-in">
                 <div className="w-full h-40 relative">
-                  <Image src="/service-2.jpg" alt="Repair & Restoration" fill style={{ objectFit: 'cover' }} className="object-cover" />
+                  <Image src="/service-2.jpg" alt="Repair & Restoration" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} className="object-cover" />
                 </div>
                 <div className="flex-1 flex flex-col justify-end p-6">
                   <h3 className="text-2xl font-bold mb-2">Repair & Restoration</h3>
@@ -123,7 +104,7 @@ const HomePage = () => {
               {/* Service Card 3 */}
               <div className="relative h-96 rounded-lg overflow-hidden shadow-xl flex flex-col bg-black bg-opacity-70 transition-transform duration-500 hover:scale-105 animate-zoom-in">
                 <div className="w-full h-40 relative">
-                  <Image src="/service-3.png" alt="Steering Wheel Customization" fill style={{ objectFit: 'cover' }} className="object-cover" />
+                  <Image src="/service-3.png" alt="Steering Wheel Customization" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} className="object-cover" />
                 </div>
                 <div className="flex-1 flex flex-col justify-end p-6">
                   <h3 className="text-2xl font-bold mb-2">Steering Wheel Customization</h3>
@@ -155,6 +136,7 @@ const HomePage = () => {
                   src="/gallery-image-1.jpg"
                   alt="Car seat before upholstery repair - Al Ettisam Dubai, car seat repair, car seat upholstery"
                   fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="rounded-lg object-cover"
                 />
               </div>
@@ -164,6 +146,7 @@ const HomePage = () => {
                   src="/gallery-image-2.jpg"
                   alt="Custom leather car seat after upholstery - Al Ettisam Dubai, car seats, leather car seats"
                   fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="rounded-lg object-cover"
                 />
               </div>
@@ -173,6 +156,7 @@ const HomePage = () => {
                   src="/gallery-image-3.jpg"
                   alt="Embroidered logo on car seat headrest - Al Ettisam Dubai, custom car interiors"
                   fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="rounded-lg object-cover"
                 />
               </div>
@@ -182,6 +166,7 @@ const HomePage = () => {
                   src="/gallery-image-4.jpg"
                   alt="Restored classic car interior - Al Ettisam Dubai, seat restoration, car seat covers"
                   fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="rounded-lg object-cover"
                 />
               </div>
@@ -318,7 +303,7 @@ const HomePage = () => {
           <p className="text-lg font-bold">
             Email: <a href="mailto:alettisamcarseatsupholstery@gmail.com" className="hover:text-yellow-500 transition-colors">alettisamcarseatupholstery@gmail.com</a>
           </p>
-          <p className="mt-4 text-sm text-gray-500">&copy; {new Date().getFullYear()} Al Ettisam Car Seat Upholstery Dubai. All rights reserved.</p>
+          <p className="mt-4 text-sm text-gray-500">&copy; 2025 Al Ettisam Car Seat Upholstery Dubai. All rights reserved.</p>
         </div>
       </footer>
     </>

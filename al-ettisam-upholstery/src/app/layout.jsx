@@ -16,8 +16,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Al Ettisam Car Seat Upholstery",
-  description: "Al Ettisam provides expert car seat upholstery, custom leather interiors, and professional repairs in Dubai. Transform your car's interior with our quality craftsmanship.",
+  metadataBase: new URL('https://al-ettisamcarseats.vercel.app/'),
+  title: 'Al Ettisam Car Seat Upholstery Dubai',
+  description: 'Professional car seat upholstery services in Dubai.',
+  openGraph: {
+    title: 'Al Ettisam Car Seat Upholstery Dubai',
+    description: 'Professional car seat upholstery services in Dubai.',
+    url: 'https://al-ettisamcarseats.vercel.app/',
+    siteName: 'Al Ettisam Car Seat Upholstery',
+    images: [
+      {
+        url: 'https://al-ettisamcarseats.vercel.app/logo.png',
+        width: 800,
+        height: 600,
+        alt: 'Al Ettisam Car Seat Upholstery Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Al Ettisam Car Seat Upholstery Dubai',
+    description: 'Professional car seat upholstery services in Dubai.',
+    site: '@alettisamcarseats',
+    images: ['https://al-ettisamcarseats.vercel.app/logo.png'],
+  },
 };
 
 export default function RootLayout({ children }) {
